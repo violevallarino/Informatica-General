@@ -1,0 +1,16 @@
+body { 
+     background-color: rgb(204, 0, 0);
+}
+p {color: whitesmoke;
+text-align: left;
+font-family:'Poppins',sans-serif;
+font-size: 18px}
+h1 {color:whitesmoke;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+#menu {color: whitesmoke;
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+}
