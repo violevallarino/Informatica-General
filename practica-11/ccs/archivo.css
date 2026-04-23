@@ -1,10 +1,17 @@
-body{background-image: url(../img/fondo.jpg);}
+body{background-color: black;}
 header{background-color: rgb(0, 0, 51);
 color: white;
 font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;}
+  .viole {color: white;
+    font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+font-size: 13px;
+}
 nav{background-color: rgb(0, 0, 102);
 color: white;
 font-family: "Fira Code", monospace;
@@ -15,6 +22,23 @@ font-family: "Fira Code", monospace;
   p{color: white;
     font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
+}
+h2{color: white;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: strong;
+  font-size: 33px;
+}
+.banner { width:"100%" ;
+  max-width: 1000px;
+         height:"33vh" ;
+         object-position: center ;
+         object-fit: cover}
+
+.container {max-width: 1000px;
+margin: 0 auto;
+padding: 0 20px;
 }
