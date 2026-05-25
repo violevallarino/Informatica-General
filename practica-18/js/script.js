@@ -1,0 +1,13 @@
+alert("Al aceptar cambia todo");
+let titulo = document.querySelector("#titulo-principal");
+let p1 = document.querySelector("#parrafo-uno");
+let p2 = document.querySelector("#parrafo-dos");
+let cuerpoPagina = document.querySelector("body");
+titulo.innerText = "¡El título ha sido transformado!";
+p1.innerText = "Este párrafo cambió su texto completamente gracias a JavaScript.";
+p2.innerText = "El segundo párrafo también mutó después de que hiciste clic en aceptar.";
+titulo.style.color = "#9b59b6";
+titulo.style.fontFamily = "Georgia, serif";
+p1.style.color = "#ffffff";
+p1.style.backgroundColor = "#e74c3c";
+cuerpoPagina.style.backgroundColor = "#ffffff";
