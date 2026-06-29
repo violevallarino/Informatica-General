@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microcentro · Buenos Aires</title>
+  <meta name="description" content="Microcentro: el corazón financiero, político y cultural de Buenos Aires. Obelisco, Peatonal Florida y Teatro Colón. Práctica 35 - Informática General.">
+
+  <!-- Tipografías de Google Fonts: Archivo Black para títulos, Archivo para texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/archivo.css">
+</head>
+<body class="paginaMicrocentro">
+
+  <!-- ======================================
+       CONTENEDOR GENERAL: envuelve todo el contenido de la página
+       ====================================== -->
+  <div class="contenedorGeneral" id="contenedorGeneral">
+
+    <!-- SIDEBAR: menú de navegación fijo a la izquierda -->
+    <nav class="sidebar" id="sidebarPrincipal" aria-label="Navegación principal">
+      <a href="index.html" class="marcaSidebar">Buenos Aires</a>
+
+      <ul class="listaNavegacion">
+        <li>
+          <a href="index.html" class="enlaceNav" id="enlaceBaGeneral">BA General</a>
+        </li>
+        <li>
+          <a href="san-telmo.html" class="enlaceNav" id="enlaceSanTelmo">San Telmo</a>
+        </li>
+        <li>
+          <a href="microcentro.html" class="enlaceNav enlaceActivo" id="enlaceMicrocentro">Micro centro</a>
+        </li>
+        <li>
+          <a href="villa-crespo.html" class="enlaceNav" id="enlaceVillaCrespo">Villa Crespo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- BOTÓN FLOTANTE FIJO: alterna el modo mundialista -->
+    <button type="button" class="botonFlotante" id="botonFlotanteMundialista">
+      Modo<br>Mundialista
+    </button>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido" id="contenidoPrincipal">
+
+      <!-- BLOQUE 1: Hero del barrio -->
+      <header class="bloque bloqueHero" id="bloqueHero">
+        <div class="heroTexto">
+          <p class="textoEyebrow">Centro histórico · Desde 1580</p>
+          <h1 class="tituloHero">Micro <br> centro.</h1>
+          <p class="descripcionHero">
+            El corazón financiero, político y cultural de la Argentina. Donde el Obelisco mira
+            hacia todos lados y la Peatonal Florida nunca deja de sonar.
+          </p>
+
+          <ul class="listaEtiquetas">
+            <li class="etiqueta">Obelisco</li>
+            <li class="etiqueta">Peatonal Florida</li>
+            <li class="etiqueta">Teatro Colón</li>
+            <li class="etiqueta">Casa Rosada</li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- BLOQUE 2: Estadísticas del barrio -->
+      <section class="bloque bloqueEstadisticas" id="bloqueEstadisticas" aria-label="Estadísticas del Microcentro">
+        <div class="estadistica">
+          <p class="numeroEstadistica">9'</p>
+          <p class="etiquetaEstadistica">En subte desde Palermo</p>
+        </div>
+        <div class="estadistica">
+          <p class="numeroEstadistica">1908</p>
+          <p class="etiquetaEstadistica">Apertura Teatro Colón</p>
+        </div>
+        <div class="estadistica">
+          <p class="numeroEstadistica">67m</p>
+          <p class="etiquetaEstadistica">Altura del Obelisco</p>
+        </div>
+        <div class="estadistica">
+          <p class="numeroEstadistica">6</p>
+          <p class="etiquetaEstadistica">Líneas de subte confluyen</p>
+        </div>
+      </section>
+
+      <!-- BLOQUE 3: El centro que no para (intro + destacados) -->
+      <section class="bloque bloqueIntro" id="bloqueIntro">
+        <h2 class="tituloSeccion">El centro que no para</h2>
+
+        <div class="contenedorIntro">
+          <p class="textoIntro">
+            El Microcentro es la superposición de todos los Buenos Aires posibles. En una sola
+            manzana conviven un edificio art déco de los años 30, una galería comercial de los 70
+            y una startup de tecnología. La Peatonal Florida fue la primera calle peatonal del
+            mundo hispanohablante. El Teatro Colón tiene una acústica reconocida entre las cinco
+            mejores del planeta. Y la Plaza de Mayo sigue siendo el escenario donde la historia
+            argentina decide ponerse en movimiento.
+          </p>
+
+          <ul class="listaDestacados">
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">Casa Rosada</p>
+              <p class="etiquetaDestacado">Sede del ejecutivo</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">Cabildo</p>
+              <p class="etiquetaDestacado">Desde 1751</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">Teatro Colón</p>
+              <p class="etiquetaDestacado">Teatro de ópera</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4: Imperdibles del Microcentro -->
+      <section class="bloque bloqueImperdibles" id="bloqueImperdibles">
+        <h2 class="tituloSeccion">Imperdibles del Microcentro</h2>
+
+        <div class="contenedorImperdibles">
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">El Obelisco</h3>
+            <p class="descripcionImperdible">
+              Construido en 1936 en solo 31 días. El símbolo de la ciudad que aparece en cada postal
+              y en cada festejo del país.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">Teatro Colón</h3>
+            <p class="descripcionImperdible">
+              Una de las mejores acústicas del mundo. La ópera, el ballet y la filarmónica comparten
+              un edificio que podría ser un palacio europeo.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">Peatonal Florida</h3>
+            <p class="descripcionImperdible">
+              Primera calle peatonal del mundo de habla hispana. Librerías, casas de cambio y músicos
+              que tocan en vivo todo el día.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">Plaza de Mayo</h3>
+            <p class="descripcionImperdible">
+              El centro político de la Argentina desde 1580. Las Madres, el Cabildo, la Casa Rosada
+              y la Pirámide en un mismo espacio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 5: Cita destacada -->
+      <section class="bloque bloqueCita" id="bloqueCita">
+        <blockquote class="textoCita">
+          El Obelisco no marca el centro de la ciudad. <br>
+          Marca el <span class="resaltadoAmarillo">centro del país.</span>
+        </blockquote>
+        <p class="autorCita">Microcentro, Buenos Aires</p>
+      </section>
+
+      <!-- BLOQUE 6: Arquitectura para mirar para arriba -->
+      <section class="bloque bloqueArquitectura" id="bloqueArquitectura">
+        <h2 class="tituloSeccion">Arquitectura para mirar para arriba</h2>
+
+        <div class="contenedorArquitectura">
+          <div class="tarjetaArquitectura">
+            <h3 class="tituloArquitectura">Art déco porteño</h3>
+            <p class="descripcionArquitectura">
+              Los años 30 dejaron edificios con ornamentaciones de bronce y fachadas de piedra que
+              compiten con Manhattan.
+            </p>
+          </div>
+
+          <div class="tarjetaArquitectura">
+            <h3 class="tituloArquitectura">Galerías interiores</h3>
+            <p class="descripcionArquitectura">
+              Laberintos de galerías comerciales que cruzan manzanas enteras. Un Buenos Aires
+              paralelo que pocos turistas conocen.
+            </p>
+          </div>
+
+          <div class="tarjetaArquitectura">
+            <h3 class="tituloArquitectura">Av. de Mayo</h3>
+            <p class="descripcionArquitectura">
+              El eje que une Casa Rosada con el Congreso. Balcones con balaustradas, cafés
+              centenarios y el Café Tortoni.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIE DE PÁGINA -->
+      <footer class="piePagina" id="piePagina">
+        <p class="textoPiePagina">Microcentro · Práctica 35</p>
+        <p class="tagline">El centro que nunca para</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- El script siempre se carga al final del body -->
+  <script src="js/script.js"></script>
+</body>
+</html>

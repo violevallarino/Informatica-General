@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Crespo · Buenos Aires</title>
+  <meta name="description" content="Villa Crespo: el barrio bohemio entre Palermo y Caballito. Talleres, murga y brunch sin pretensiones. Práctica 35 - Informática General.">
+
+  <!-- Tipografías de Google Fonts: Archivo Black para títulos, Archivo para texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/archivo.css">
+</head>
+<body class="paginaVillaCrespo">
+
+  <!-- ======================================
+       CONTENEDOR GENERAL: envuelve todo el contenido de la página
+       ====================================== -->
+  <div class="contenedorGeneral" id="contenedorGeneral">
+
+    <!-- SIDEBAR: menú de navegación fijo a la izquierda -->
+    <nav class="sidebar" id="sidebarPrincipal" aria-label="Navegación principal">
+      <a href="index.html" class="marcaSidebar">Buenos Aires</a>
+
+      <ul class="listaNavegacion">
+        <li>
+          <a href="index.html" class="enlaceNav" id="enlaceBaGeneral">BA General</a>
+        </li>
+        <li>
+          <a href="san-telmo.html" class="enlaceNav" id="enlaceSanTelmo">San Telmo</a>
+        </li>
+        <li>
+          <a href="microcentro.html" class="enlaceNav" id="enlaceMicrocentro">Micro centro</a>
+        </li>
+        <li>
+          <a href="villa-crespo.html" class="enlaceNav enlaceActivo" id="enlaceVillaCrespo">Villa Crespo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- BOTÓN FLOTANTE FIJO: alterna el modo mundialista -->
+    <button type="button" class="botonFlotante" id="botonFlotanteMundialista">
+      Modo<br>Mundialista
+    </button>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido" id="contenidoPrincipal">
+
+      <!-- BLOQUE 1: Hero del barrio -->
+      <header class="bloque bloqueHero" id="bloqueHero">
+        <div class="heroTexto">
+          <p class="textoEyebrow">Barrio bohemio · Entre Palermo y Caballito</p>
+          <h1 class="tituloHero">Villa <br> Crespo.</h1>
+          <p class="descripcionHero">
+            El barrio que no quiere ser Palermo. Fábricas reconvertidas en galerías, talleres de
+            murgueros, brunchs sin Instagram y música que sale por las ventanas.
+          </p>
+
+          <ul class="listaEtiquetas">
+            <li class="etiqueta">Cultura</li>
+            <li class="etiqueta">Gastronomía</li>
+            <li class="etiqueta">Arte urbano</li>
+            <li class="etiqueta">Sin pretensiones</li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- BLOQUE 2: El alma del barrio (intro + destacados) -->
+      <section class="bloque bloqueIntro" id="bloqueIntro">
+        <h2 class="tituloSeccion">El alma del barrio</h2>
+
+        <div class="contenedorIntro">
+          <p class="textoIntro">
+            Villa Crespo nació como barrio obrero e industrial a fines del siglo XIX. Las curtidoras
+            y fábricas de zapatos dejaron una identidad de trabajo y comunidad que hoy convive con la
+            ola creativa que llegó cuando los alquileres de Palermo se dispararon. Artistas, músicos,
+            diseñadores y cocineros encontraron acá espacios amplios y vecinos tranquilos. El
+            resultado: un barrio que mezcla la murga del domingo con la galería de arte del lunes,
+            sin que nadie vea contradicción.
+          </p>
+
+          <ul class="listaDestacados">
+            <li class="tarjetaDestacada">
+              <p class="numeroDestacado">1888</p>
+              <p class="etiquetaDestacado">Fundación</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="numeroDestacado">+60</p>
+              <p class="etiquetaDestacado">Bares y cafés</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="numeroDestacado">15'</p>
+              <p class="etiquetaDestacado">Del centro en subte</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BLOQUE 3: Escenas del barrio -->
+      <section class="bloque bloqueEscenas" id="bloqueEscenas">
+        <h2 class="tituloSeccion">Escenas del barrio</h2>
+
+        <div class="contenedorEscenas">
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">Mercado VC</h3>
+            <p class="descripcionEscena">Diseño, gastronomía y vintage en una fábrica reconvertida.</p>
+          </div>
+
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">La murga</h3>
+            <p class="descripcionEscena">Los domingos de carnaval, las calles se llenan de bombos y disfraces.</p>
+          </div>
+
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">Av. Corrientes</h3>
+            <p class="descripcionEscena">Librerías, pizzerías y bares que arrancan cuando la ciudad quiere dormir.</p>
+          </div>
+
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">Canal Verde</h3>
+            <p class="descripcionEscena">El viejo canal industrial ahora es paseo con murales y plantas.</p>
+          </div>
+
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">Talleres de diseño</h3>
+            <p class="descripcionEscena">Marcas locales que nacieron en los talleres. Moda sin tendencias.</p>
+          </div>
+
+          <div class="tarjetaEscena">
+            <h3 class="tituloEscena">Brunch del domingo</h3>
+            <p class="descripcionEscena">Sin reserva, sin prisa. La fila es parte del plan.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4: ¿Por qué vivir acá? -->
+      <section class="bloque bloquePorQueVivir" id="bloquePorQueVivir">
+        <h2 class="tituloPorQueVivir">¿Por qué <br> vivir <br> acá?</h2>
+
+        <ul class="listaRazones">
+          <li class="razon">Alquileres más bajos que Palermo con la misma calidad de vida</li>
+          <li class="razon">Cuatro líneas de subte a menos de 10 cuadras</li>
+          <li class="razon">Comunidad de artistas y emprendedores creativos</li>
+        </ul>
+      </section>
+
+      <!-- BLOQUE 5: Los tres barrios en perspectiva -->
+      <section class="bloque bloquePerspectiva" id="bloquePerspectiva">
+        <h2 class="tituloSeccion">Los tres barrios en perspectiva</h2>
+
+        <div class="contenedorPerspectiva">
+          <a href="san-telmo.html" class="tarjetaPerspectiva" id="perspectivaSanTelmo">
+            <h3 class="tituloPerspectiva">San Telmo</h3>
+            <p class="descripcionPerspectiva">
+              Historia y tango. Turistas, anticuarios, milongas que empiezan a medianoche.
+            </p>
+          </a>
+
+          <a href="microcentro.html" class="tarjetaPerspectiva" id="perspectivaMicrocentro">
+            <h3 class="tituloPerspectiva">Microcentro</h3>
+            <p class="descripcionPerspectiva">
+              Poder y arquitectura. El Obelisco, la Rosada, las galerías y el Teatro Colón.
+            </p>
+          </a>
+
+          <div class="tarjetaPerspectiva tarjetaPerspectivaActiva" id="perspectivaVillaCrespo">
+            <h3 class="tituloPerspectiva">Villa Crespo</h3>
+            <p class="descripcionPerspectiva">
+              Arte y barrio real. Sin turismo masivo, con identidad propia y brunch irresistible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIE DE PÁGINA -->
+      <footer class="piePagina" id="piePagina">
+        <p class="textoPiePagina">Villa Crespo · Práctica 35</p>
+        <p class="tagline">El barrio que no quiere ser otro</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- El script siempre se carga al final del body -->
+  <script src="js/script.js"></script>
+</body>
+</html>

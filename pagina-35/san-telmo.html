@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Telmo · Buenos Aires</title>
+  <meta name="description" content="San Telmo: el barrio más antiguo de Buenos Aires. Historia, tango, ferias y anticuarios. Práctica 35 - Informática General.">
+
+  <!-- Tipografías de Google Fonts: Archivo Black para títulos, Archivo para texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/archivo.css">
+</head>
+<body class="paginaSanTelmo">
+
+  <!-- ======================================
+       CONTENEDOR GENERAL: envuelve todo el contenido de la página
+       (sidebar + contenido principal). Buena práctica para
+       tener un único punto de referencia en el CSS/JS.
+       ====================================== -->
+  <div class="contenedorGeneral" id="contenedorGeneral">
+
+    <!-- SIDEBAR: menú de navegación fijo a la izquierda -->
+    <nav class="sidebar" id="sidebarPrincipal" aria-label="Navegación principal">
+      <a href="index.html" class="marcaSidebar">Buenos Aires</a>
+
+      <ul class="listaNavegacion">
+        <li>
+          <a href="index.html" class="enlaceNav" id="enlaceBaGeneral">BA General</a>
+        </li>
+        <li>
+          <a href="san-telmo.html" class="enlaceNav enlaceActivo" id="enlaceSanTelmo">San Telmo</a>
+        </li>
+        <li>
+          <a href="microcentro.html" class="enlaceNav" id="enlaceMicrocentro">Micro centro</a>
+        </li>
+        <li>
+          <a href="villa-crespo.html" class="enlaceNav" id="enlaceVillaCrespo">Villa Crespo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- BOTÓN FLOTANTE FIJO: alterna el modo mundialista -->
+    <button type="button" class="botonFlotante" id="botonFlotanteMundialista">
+      Modo<br>Mundialista
+    </button>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido" id="contenidoPrincipal">
+
+      <!-- BLOQUE 1: Hero del barrio -->
+      <header class="bloque bloqueHero" id="bloqueHero">
+        <div class="heroTexto">
+          <p class="textoEyebrow">Barrio histórico · Fundado en 1580</p>
+          <h1 class="tituloHero">San <br>Telmo</h1>
+          <p class="descripcionHero">
+            El barrio más antiguo de Buenos Aires huele a café, a cuero viejo y a bandoneón.
+            Sus adoquines cuentan historias que el asfalto nunca podría.
+          </p>
+        </div>
+      </header>
+
+      <!-- BLOQUE 2: Estadísticas del barrio -->
+      <section class="bloque bloqueEstadisticas" id="bloqueEstadisticas" aria-label="Estadísticas de San Telmo">
+        <div class="estadistica">
+          <p class="numeroEstadistica">1580</p>
+          <p class="etiquetaEstadistica">Fundación</p>
+        </div>
+        <div class="estadistica">
+          <p class="numeroEstadistica">+300</p>
+          <p class="etiquetaEstadistica">Anticuarios</p>
+        </div>
+        <div class="estadistica">
+          <p class="numeroEstadistica">7</p>
+          <p class="etiquetaEstadistica">Milongas activas</p>
+        </div>
+      </section>
+
+      <!-- BLOQUE 3: Un barrio con memoria (intro + destacados) -->
+      <section class="bloque bloqueIntro" id="bloqueIntro">
+        <h2 class="tituloSeccion">Un barrio con memoria</h2>
+
+        <div class="contenedorIntro">
+          <p class="textoIntro">
+            San Telmo fue el primer barrio aristocrático de Buenos Aires. Cuando la fiebre amarilla
+            de 1871 obligó a las familias ricas a huir hacia el norte, los conventillos tomaron el
+            lugar de las mansiones. Inmigrantes italianos y españoles llenaron esos patios compartidos,
+            y el tango nació entre esas paredes. Hoy, San Telmo mantiene esa doble vida: por el día,
+            turistas y anticuarios; por la noche, milongas que empiezan a medianoche y no terminan
+            hasta el amanecer.
+          </p>
+
+          <ul class="listaDestacados">
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">Plaza Dorrego</p>
+              <p class="etiquetaDestacado">Corazón del barrio</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">Mercado de San Telmo</p>
+              <p class="etiquetaDestacado">Desde 1897</p>
+            </li>
+            <li class="tarjetaDestacada">
+              <p class="tituloDestacado">La Defensa</p>
+              <p class="etiquetaDestacado">Arteria principal</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4: Lo que no podés perderte -->
+      <section class="bloque bloqueImperdibles" id="bloqueImperdibles">
+        <h2 class="tituloSeccion">Lo que no podés perderte</h2>
+
+        <div class="contenedorImperdibles">
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">La feria del domingo</h3>
+            <p class="descripcionImperdible">
+              Cientos de puestos en Plaza Dorrego: objetos de época, esculturas y libros que huelen a otro siglo.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">El mercado de San Telmo</h3>
+            <p class="descripcionImperdible">
+              Construido en 1897, con techo de hierro y vitaux. Especias, flores y el mejor choripán de la zona sur.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">Milonga de noche</h3>
+            <p class="descripcionImperdible">
+              No hay horario fijo. El tango empieza cuando el barrio decide. Llevá zapatos cómodos.
+            </p>
+          </div>
+
+          <div class="tarjetaImperdible">
+            <h3 class="tituloImperdible">Calle Defensa</h3>
+            <p class="descripcionImperdible">
+              La arteria principal. Adoquines, galerías, murales y artistas callejeros en cada cuadra.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 5: Cita destacada -->
+      <section class="bloque bloqueCita" id="bloqueCita">
+        <blockquote class="textoCita">
+          El tango no se baila. <br>
+          El tango <span class="resaltadoAmarillo">te baila a vos.</span>
+        </blockquote>
+        <p class="autorCita">San Telmo, Buenos Aires</p>
+      </section>
+
+      <!-- BLOQUE 6: Cómo llegar -->
+      <section class="bloque bloqueComoLlegar" id="bloqueComoLlegar">
+        <h2 class="tituloSeccion">Cómo llegar</h2>
+
+        <div class="mapaBarrio" id="mapaBarrio">
+          [mapa del barrio]
+        </div>
+
+        <ul class="listaTransporte">
+          <li class="itemTransporte">Subte Línea C — Estación Independencia</li>
+          <li class="itemTransporte">Colectivos 29, 39, 86 por Av. San Juan</li>
+          <li class="itemTransporte">Caminando desde Puerto Madero: 15 minutos</li>
+        </ul>
+      </section>
+
+      <!-- PIE DE PÁGINA -->
+      <footer class="piePagina" id="piePagina">
+        <p class="textoPiePagina">San Telmo · Práctica 35</p>
+        <p class="tagline">El barrio que nunca durmió</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- El script siempre se carga al final del body -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,997 @@
+/* ============================================
+   ARCHIVO.CSS
+   Estilos generales del sitio "Buenos Aires"
+   Práctica 35 - Informática General
+   ============================================ */
+
+/* Tipografía de los títulos (Poppins Black, bien gruesa) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&display=swap');
+
+/* ---------- 1. VARIABLES Y RESET ---------- */
+
+:root {
+  /* Paleta inspirada en el fileteado porteño */
+  --verde-noche: #0D2B1D;
+  --naranja-fuego: #E63416;
+  --amarillo: #F7C948;
+  --rosa-fuerte: #C2185B;
+  --blanco: #FFFFFF;
+
+  /* Tipografías */
+  --fuente-titulos: 'Poppins', sans-serif;
+  --fuente-texto: 'Archivo', sans-serif;
+
+  /* Medidas reutilizables */
+  --ancho-sidebar: 113px;
+  --radio-borde: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--verde-noche);
+  background-color: var(--blanco);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* Color de selección de texto (en vez del celeste por defecto) */
+::selection {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+
+/* ---------- 2. LAYOUT GENERAL ---------- */
+
+/* Contenedor general: envuelve sidebar + contenido en flexbox fila */
+.contenedorGeneral {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* El contenido ocupa todo el ancho que sobra a la derecha del sidebar fijo,
+   y se organiza en columna porque sus bloques se apilan al scrollear */
+.contenido {
+  margin-left: calc(var(--ancho-sidebar) + 60px);
+  width: calc(100% - var(--ancho-sidebar) - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada bloque ocupa todo el ancho disponible: así se logra el efecto
+   "Linktree" de bloques de color apilados verticalmente */
+.bloque {
+  padding: 64px 72px;
+}
+
+
+/* ---------- 3. SIDEBAR FIJO ---------- */
+/* Flota separado de los bordes, angosto y con bordes bien redondeados
+   (casi una cápsula), estilo Linktree. SIEMPRE verde noche, sin importar
+   la página (el color principal de cada página ahora se usa de fondo
+   detrás de la barra, ver las secciones de cada página más abajo). */
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 16px;
+  bottom: 20px;
+  width: var(--ancho-sidebar);
+  background-color: var(--verde-noche);
+  border-radius: 48px;
+  border-color: #F7C948;
+  border-top-left-radius: 2px;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.marcaSidebar {
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  color: var(--amarillo);
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.listaNavegacion {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.enlaceNav {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--blanco);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+/* Overlay oscuro: funciona igual de bien sobre fondos claros u oscuros */
+.enlaceNav:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.enlaceActivo {
+  background-color: rgba(0, 0, 0, 0.22);
+}
+
+
+/* ---------- 4. BOTÓN FLOTANTE FIJO (modo mundialista) ---------- */
+
+.botonFlotante {
+  position: fixed;
+  left: 18px;
+  bottom: 30px;
+  z-index: 20;
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.botonFlotante:hover {
+  transform: scale(1.06);
+}
+
+
+/* ---------- 5. TIPOGRAFÍA Y COMPONENTES COMPARTIDOS ---------- */
+
+.textoEyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.tituloHero {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.descripcionHero {
+  font-size: 25px;
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
+.resaltadoAmarillo {
+  color: var(--amarillo);
+}
+
+.tituloSeccion {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 33px;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  margin-bottom: 28px;
+}
+
+/* Etiquetas tipo "pill": fondo transparente por defecto, solo borde */
+.listaEtiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.etiqueta {
+  background-color: transparent;
+  border: 1.5px solid currentColor;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Excepción puntual del mockup: la etiqueta "Peatonal Florida"
+   va con relleno sólido, a diferencia de las demás */
+body.paginaMicrocentro #bloqueHero .etiqueta:nth-child(2) {
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+/* Barra de estadísticas: flexbox en fila, ítems repartidos en partes iguales */
+.bloqueEstadisticas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.estadistica {
+  flex: 1;
+  min-width: 140px;
+}
+
+.numeroEstadistica {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.etiquetaEstadistica {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Cita destacada (Borges, el tango, el Obelisco) */
+.bloqueCita {
+  color: var(--blanco);
+}
+
+.iconoCita {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.textoCita {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  border-left: 4px solid var(--amarillo);
+  padding-left: 20px;
+  max-width: 720px;
+}
+
+.autorCita {
+  margin-top: 16px;
+  padding-left: 24px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Tarjetas chicas reutilizadas en varios bloques (imperdibles, arquitectura,
+   escenas, características, destacados, perspectiva). Por defecto quedan
+   como una "tarjeta translúcida" pensada para fondos oscuros/de color;
+   cada página ajusta los casos puntuales donde el fondo es claro. */
+.tarjetaImperdible,
+.tarjetaArquitectura,
+.tarjetaEscena,
+.tarjetaCaracteristica,
+.tarjetaDestacada,
+.tarjetaPerspectiva {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.tituloImperdible,
+.tituloArquitectura,
+.tituloEscena,
+.tituloCaracteristica,
+.tituloDestacado,
+.tituloPerspectiva,
+.numeroDestacado {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Color amarillo de acento por defecto en los títulos de tarjeta */
+.tarjetaImperdible .tituloImperdible,
+.tarjetaArquitectura .tituloArquitectura,
+.tarjetaEscena .tituloEscena,
+.tarjetaCaracteristica .tituloCaracteristica,
+.tarjetaDestacada .tituloDestacado,
+.tarjetaDestacada .numeroDestacado,
+.tarjetaPerspectiva .tituloPerspectiva {
+  color: var(--amarillo);
+}
+
+.descripcionImperdible,
+.descripcionArquitectura,
+.descripcionEscena,
+.descripcionCaracteristica,
+.descripcionPerspectiva,
+.etiquetaDestacado {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.etiquetaDestacado {
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+/* Grillas de tarjetas: flexbox en fila con wrap (se acomodan solas) */
+.contenedorImperdibles,
+.contenedorCaracteristicas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contenedorImperdibles .tarjetaImperdible,
+.contenedorCaracteristicas .tarjetaCaracteristica {
+  flex: 1 1 calc(50% - 20px);
+}
+
+.contenedorArquitectura,
+.contenedorEscenas,
+.contenedorPerspectiva {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contenedorArquitectura .tarjetaArquitectura,
+.contenedorEscenas .tarjetaEscena,
+.contenedorPerspectiva .tarjetaPerspectiva {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+/* Pie de página, compartido por las 4 páginas */
+.piePagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 72px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+.puntosPaginacion {
+  display: flex;
+  gap: 8px;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.puntoActivo {
+  background-color: var(--amarillo);
+}
+
+
+/* ============================================
+   PÁGINA: BA GENERAL (index.html)
+   Los 5 colores de la paleta, equilibrados.
+   Sidebar: rosa fuerte (color principal de esta página)
+   ============================================ */
+
+body.paginaGeneral {
+  background-color: var(--rosa-fuerte);
+}
+
+/* Hero: flexbox en fila (texto a la izquierda, botón a la derecha) */
+body.paginaGeneral #bloqueHero {
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.heroTexto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.botonActivarModo {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  border-radius: 30px;
+}
+
+body.paginaGeneral #bloqueEstadisticas {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+body.paginaGeneral #bloqueBarrios {
+  background-color: var(--blanco);
+  color: var(--verde-noche);
+}
+
+body.paginaGeneral #bloqueBarrios .tituloSeccion {
+  color: var(--rosa-fuerte);
+}
+
+/* Tarjetas de "Explorá los barrios": cada una con un color sólido propio */
+.contenedorTarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tarjetaBarrio {
+  flex: 1 1 calc(33.333% - 24px);
+  border-radius: var(--radio-borde);
+  padding: 28px;
+  color: var(--blanco);
+  transition: transform 0.2s ease;
+}
+
+.tarjetaBarrio:hover {
+  transform: translateY(-6px);
+}
+
+.tarjetaNaranja { background-color: var(--naranja-fuego); }
+.tarjetaVerde   { background-color: var(--verde-noche); }
+.tarjetaAmarilla {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+.tituloTarjeta {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.descripcionTarjeta {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.etiquetasTarjeta {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+body.paginaGeneral #bloqueCita {
+  background-color: var(--naranja-fuego);
+}
+
+body.paginaGeneral #bloqueUnica {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaGeneral #piePagina {
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+}
+
+
+/* ============================================
+   COMPONENTES COMPARTIDOS POR LAS 3 PÁGINAS DE BARRIO
+   ============================================ */
+
+/* "Intro" del barrio: flexbox en fila DISTINTA a la del index
+   (columna de texto ancha + columna angosta de tarjetas apiladas) */
+.contenedorIntro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.textoIntro {
+  flex: 2 1 360px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.listaDestacados {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tarjetaDestacada {
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+
+/* ============================================
+   PÁGINA: SAN TELMO
+   Predomina el naranja. Sidebar: naranja fuego
+   ============================================ */
+
+body.paginaSanTelmo {
+  background-color: var(--naranja-fuego);
+}
+
+body.paginaSanTelmo #bloqueHero,
+body.paginaSanTelmo #bloqueEstadisticas {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+body.paginaSanTelmo #bloqueIntro {
+  background-color: var(--blanco);
+  color: var(--verde-noche);
+}
+
+body.paginaSanTelmo #bloqueIntro .tituloSeccion {
+  color: var(--naranja-fuego);
+}
+
+/* En esta página, las tarjetas destacadas van sobre fondo blanco:
+   necesitan su propio color sólido en vez del translúcido por defecto */
+body.paginaSanTelmo #bloqueIntro .tarjetaDestacada {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+body.paginaSanTelmo #bloqueIntro .tituloDestacado {
+  color: var(--blanco);
+}
+
+body.paginaSanTelmo #bloqueImperdibles {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+body.paginaSanTelmo #bloqueImperdibles .tituloSeccion {
+  color: var(--verde-noche);
+}
+
+/* Tarjetas de "Lo que no podés perderte": blancas sobre fondo amarillo */
+body.paginaSanTelmo #bloqueImperdibles .tarjetaImperdible {
+  background-color: var(--blanco);
+  color: var(--verde-noche);
+}
+
+body.paginaSanTelmo #bloqueImperdibles .tituloImperdible {
+  color: var(--naranja-fuego);
+}
+
+body.paginaSanTelmo #bloqueCita {
+  background-color: var(--rosa-fuerte);
+}
+
+body.paginaSanTelmo #bloqueComoLlegar {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaSanTelmo #piePagina {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+/* Placeholder del mapa */
+.mapaBarrio {
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 56px 20px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.listaTransporte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemTransporte {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.itemTransporte::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 10px;
+  color: var(--naranja-fuego);
+}
+
+
+/* ============================================
+   PÁGINA: MICROCENTRO
+   Predomina el verde noche. Sidebar: verde noche
+   ============================================ */
+
+body.paginaMicrocentro {
+  background-color: var(--verde-noche);
+}
+
+body.paginaMicrocentro #bloqueHero {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaMicrocentro #bloqueEstadisticas {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+body.paginaMicrocentro #bloqueIntro {
+  background-color: var(--blanco);
+  color: var(--verde-noche);
+}
+
+body.paginaMicrocentro #bloqueIntro .tituloSeccion {
+  color: var(--verde-noche);
+}
+
+/* Tarjetas destacadas sobre fondo blanco: van en verde noche sólido */
+body.paginaMicrocentro #bloqueIntro .tarjetaDestacada {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaMicrocentro #bloqueImperdibles {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+body.paginaMicrocentro #bloqueImperdibles .tituloSeccion {
+  color: var(--verde-noche);
+}
+
+/* Tarjetas "Imperdibles": verde noche sólido sobre fondo amarillo */
+body.paginaMicrocentro #bloqueImperdibles .tarjetaImperdible {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaMicrocentro #bloqueCita {
+  background-color: var(--rosa-fuerte);
+}
+
+body.paginaMicrocentro #bloqueArquitectura {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+body.paginaMicrocentro #piePagina {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+
+/* ============================================
+   PÁGINA: VILLA CRESPO
+   Predomina el amarillo. Sidebar: amarillo
+   (con texto oscuro, porque el fondo ahora es claro)
+   ============================================ */
+
+body.paginaVillaCrespo {
+  background-color: var(--amarillo);
+}
+
+body.paginaVillaCrespo #bloqueHero {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+body.paginaVillaCrespo #bloqueIntro {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaVillaCrespo #bloqueEscenas {
+  background-color: var(--blanco);
+  color: var(--verde-noche);
+}
+
+body.paginaVillaCrespo #bloqueEscenas .tituloSeccion {
+  color: var(--verde-noche);
+}
+
+/* Tarjetas "Escenas del barrio": una paleta de colores distinta por tarjeta */
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(1),
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(5) {
+  background-color: var(--amarillo);
+  color: var(--verde-noche);
+}
+
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(2),
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(6) {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+}
+
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(3) {
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+}
+
+body.paginaVillaCrespo #bloqueEscenas .tarjetaEscena:nth-child(4) {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+body.paginaVillaCrespo #bloqueEscenas .tituloEscena {
+  color: inherit;
+}
+
+body.paginaVillaCrespo #bloquePorQueVivir {
+  background-color: var(--naranja-fuego);
+  color: var(--blanco);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.tituloPorQueVivir {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 32px;
+  text-transform: uppercase;
+  flex: 1 1 200px;
+}
+
+.listaRazones {
+  flex: 2 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.razon {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px 16px 36px;
+  font-size: 14px;
+}
+
+.razon::before {
+  content: '●';
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  font-size: 10px;
+  color: var(--amarillo);
+}
+
+body.paginaVillaCrespo #bloquePerspectiva {
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+}
+
+/* Tarjetas de "Los tres barrios en perspectiva": claras, con texto oscuro */
+body.paginaVillaCrespo #bloquePerspectiva .tarjetaPerspectiva {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--verde-noche);
+  transition: transform 0.2s ease;
+}
+
+body.paginaVillaCrespo #bloquePerspectiva .tituloPerspectiva {
+  color: var(--naranja-fuego);
+}
+
+body.paginaVillaCrespo #bloquePerspectiva a.tarjetaPerspectiva:hover {
+  transform: translateY(-6px);
+}
+
+/* La tarjeta del barrio actual no es un link: sin cursor ni hover */
+.tarjetaPerspectivaActiva {
+  cursor: default;
+}
+
+body.paginaVillaCrespo #piePagina {
+  background-color: var(--verde-noche);
+  color: var(--blanco);
+}
+
+
+/* ============================================
+   MODO MUNDIALISTA
+   El JS solo agrega/quita esta clase del body.
+   Como todo el sitio usa variables de color, alcanza con
+   redefinirlas para que el sitio entero pase a celeste y dorado.
+   ============================================ */
+
+body.modoMundialista {
+  --verde-noche: #0B3D91;
+  --naranja-fuego: #75AADB;
+  --amarillo: #FFD700;
+  --rosa-fuerte: #1565C0;
+}
+
+
+/* ---------- 6. RESPONSIVE BÁSICO ---------- */
+
+@media (max-width: 860px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .listaNavegacion {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contenido {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .bloque {
+    padding: 40px 24px;
+  }
+
+  .tarjetaBarrio,
+  .contenedorImperdibles .tarjetaImperdible,
+  .contenedorCaracteristicas .tarjetaCaracteristica,
+  .contenedorArquitectura .tarjetaArquitectura,
+  .contenedorEscenas .tarjetaEscena,
+  .contenedorPerspectiva .tarjetaPerspectiva {
+    flex: 1 1 100%;
+  }
+
+  .botonFlotante {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
+/**modo mundial
+
+body.modoMundialista {
+  /* Los 4 colores del modo mundialista. El "blanco" no es FFFFFF
+     puro, es un blanco hueso más amable a la vista. */
+  --celeste-mundial: #6CACE4;
+  --azul-mundial: #0B3D91;
+  --amarillo-mundial: #FFCB45;
+  --blanco-mundial: #F2EFE6;
+ 
+  /* Mezcla pareja por defecto: la usa BA General, que no tiene
+     un color que predomine. Cada barrio la pisa más abajo. */
+  --verde-noche: var(--azul-mundial);
+  --naranja-fuego: var(--celeste-mundial);
+  --rosa-fuerte: var(--azul-mundial);
+  --amarillo: var(--amarillo-mundial);
+  --blanco: var(--blanco-mundial);
+}
+ 
+/* San Telmo: predomina el azul */
+body.paginaSanTelmo.modoMundialista {
+  --naranja-fuego: var(--azul-mundial);
+}
+ 
+/* Microcentro: predomina el amarillo */
+body.paginaMicrocentro.modoMundialista {
+  --naranja-fuego: var(--amarillo-mundial);
+}
+ 
+/* Villa Crespo: predomina el celeste */
+body.paginaVillaCrespo.modoMundialista {
+  --rosa-fuerte: var(--celeste-mundial);
+}
+ 
+/* La barra lateral, en modo mundialista, siempre queda azul
+   (ya lo es, por la variable --verde-noche) con letras celestes */
+body.modoMundialista .marcaSidebar,
+body.modoMundialista .enlaceNav {
+  color: var(--celeste-mundial);
+}
+ 
+ 
+/* ---------- 6. RESPONSIVE BÁSICO ---------- */
+ 
+@media (max-width: 860px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+ 
+  .listaNavegacion {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ 
+  .contenido {
+    margin-left: 0;
+    width: 100%;
+  }
+ 
+  .bloque {
+    padding: 40px 24px;
+  }
+ 
+  .tarjetaBarrio,
+  .contenedorImperdibles .tarjetaImperdible,
+  .contenedorCaracteristicas .tarjetaCaracteristica,
+  .contenedorArquitectura .tarjetaArquitectura,
+  .contenedorEscenas .tarjetaEscena,
+  .contenedorPerspectiva .tarjetaPerspectiva {
+    flex: 1 1 100%;
+  }
+ 
+  .botonFlotante {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+ 

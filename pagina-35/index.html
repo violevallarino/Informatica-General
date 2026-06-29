@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buenos Aires · La ciudad que late</title>
+  <meta name="description" content="Sitio sobre Buenos Aires y sus barrios: San Telmo, Microcentro y Villa Crespo. Práctica 35 - Informática General.">
+
+  <!-- Tipografías de Google Fonts: Archivo Black para títulos, Archivo para texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/archivo.css">
+</head>
+<body class="paginaGeneral">
+
+  <!-- ======================================
+       CONTENEDOR GENERAL: envuelve todo el contenido de la página
+       (sidebar + contenido principal). Buena práctica para
+       tener un único punto de referencia en el CSS/JS.
+       ====================================== -->
+  <div class="contenedorGeneral" id="contenedorGeneral">
+
+  <!-- ======================================
+       SIDEBAR: menú de navegación fijo a la izquierda
+       Se repite igual en las 4 páginas del sitio
+       ====================================== -->
+  <nav class="sidebar" id="sidebarPrincipal" aria-label="Navegación principal">
+    <a href="index.html" class="marcaSidebar">Buenos Aires</a>
+
+    <ul class="listaNavegacion">
+      <li>
+        <a href="index.html" class="enlaceNav enlaceActivo" id="enlaceBaGeneral">BA General</a>
+      </li>
+      <li>
+        <a href="san-telmo.html" class="enlaceNav" id="enlaceSanTelmo">San Telmo</a>
+      </li>
+      <li>
+        <a href="microcentro.html" class="enlaceNav" id="enlaceMicrocentro">Micro centro</a>
+      </li>
+      <li>
+        <a href="villa-crespo.html" class="enlaceNav" id="enlaceVillaCrespo">Villa Crespo</a>
+      </li>
+    </ul>
+  </nav>
+
+ 
+  <button type="button" class="botonFlotante" id="botonFlotanteMundialista">
+    Modo<br>Mundialista
+  </button>
+
+  <main class="contenido" id="contenidoPrincipal">
+
+    <!-- BLOQUE 1: Hero / presentación general de la ciudad -->
+    <header class="bloque bloqueHero" id="bloqueHero">
+      <div class="heroTexto">
+        <p class="textoEyebrow">Ciudad Autónoma · Argentina</p>
+        <h1 class="tituloHero">La ciudad <br> que <span class="resaltadoAmarillo">late.</span></h1>
+        <p class="descripcionHero">
+          Buenos Aires no es una ciudad que se visita. Es una ciudad que te pasa.
+          Tango, fútbol, arquitectura europea, conventillos de colores y cafés que nunca cierran.
+        </p>
+
+        <ul class="listaEtiquetas">
+          <li class="etiqueta">48 barrios</li>
+          <li class="etiqueta">3,1M habitantes</li>
+          <li class="etiqueta">Ciudad portuaria</li>
+          <li class="etiqueta">Capital Federal</li>
+        </ul>
+      </div>
+
+      <button type="button" class="botonActivarModo" id="botonActivarModo">
+        Activar modo mundialista
+      </button>
+    </header>
+
+    <!-- BLOQUE 2: Estadísticas generales de la ciudad -->
+    <section class="bloque bloqueEstadisticas" id="bloqueEstadisticas" aria-label="Estadísticas de Buenos Aires">
+      <div class="estadistica">
+        <p class="numeroEstadistica">1536</p>
+        <p class="etiquetaEstadistica">Fundación</p>
+      </div>
+      <div class="estadistica">
+        <p class="numeroEstadistica">48</p>
+        <p class="etiquetaEstadistica">Barrios</p>
+      </div>
+      <div class="estadistica">
+        <p class="numeroEstadistica">200km&sup2;</p>
+        <p class="etiquetaEstadistica">Superficie</p>
+      </div>
+      <div class="estadistica">
+        <p class="numeroEstadistica">+80</p>
+        <p class="etiquetaEstadistica">Museos</p>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: Tarjetas para explorar los barrios -->
+    <section class="bloque bloqueBarrios" id="bloqueBarrios">
+      <h2 class="tituloSeccion">Explorá los barrios</h2>
+
+      <div class="contenedorTarjetas">
+        <a href="san-telmo.html" class="tarjetaBarrio tarjetaNaranja" id="tarjetaSanTelmo">
+          <h3 class="tituloTarjeta">San Telmo</h3>
+          <p class="descripcionTarjeta">
+            El barrio más antiguo. Adoquines, anticuarios y milongas que arrancan cuando cae el sol.
+          </p>
+          <p class="etiquetasTarjeta">Tango · Historia · Feria</p>
+        </a>
+
+        <a href="microcentro.html" class="tarjetaBarrio tarjetaVerde" id="tarjetaMicrocentro">
+          <h3 class="tituloTarjeta">Microcentro</h3>
+          <p class="descripcionTarjeta">
+            El Obelisco, la Peatonal Florida y los rascacielos que cuentan la historia económica del país.
+          </p>
+          <p class="etiquetasTarjeta">Arquitectura · Comercio</p>
+        </a>
+
+        <a href="villa-crespo.html" class="tarjetaBarrio tarjetaAmarilla" id="tarjetaVillaCrespo">
+          <h3 class="tituloTarjeta">Villa Crespo</h3>
+          <p class="descripcionTarjeta">
+            El barrio de los talleres, la murga y el brunch. Bohemia sin pretensiones.
+          </p>
+          <p class="etiquetasTarjeta">Cultura · Gastronomía</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- BLOQUE 4: Cita destacada -->
+    <section class="bloque bloqueCita" id="bloqueCita">
+      <p class="iconoCita" aria-hidden="true"> </p>
+      <blockquote class="textoCita">
+        Buenos Aires es un <span class="resaltadoAmarillo">estado mental</span> con código postal.
+      </blockquote>
+      <p class="autorCita">— Jorge Luis Borges (paráfrasis)</p>
+    </section>
+
+    <!-- BLOQUE 5: Por qué Buenos Aires es única -->
+    <section class="bloque bloqueUnica" id="bloqueUnica">
+      <h2 class="tituloSeccion">Por qué Buenos Aires es única</h2>
+
+      <div class="contenedorCaracteristicas">
+        <div class="tarjetaCaracteristica">
+          <h3 class="tituloCaracteristica">Arquitectura</h3>
+          <p class="descripcionCaracteristica">
+            Mezcla de art déco, colonial español y modernismo italiano. El centro parece París pero suena a cumbia.
+          </p>
+        </div>
+
+        <div class="tarjetaCaracteristica">
+          <h3 class="tituloCaracteristica">Gastronomía</h3>
+          <p class="descripcionCaracteristica">
+            Asado, empanadas, facturas, pizza por metro y el mejor café cortado del continente.
+          </p>
+        </div>
+
+        <div class="tarjetaCaracteristica">
+          <h3 class="tituloCaracteristica">Cultura</h3>
+          <p class="descripcionCaracteristica">
+            Teatro Colón, Feria del Libro, milongas abiertas y murales en cada pared disponible.
+          </p>
+        </div>
+
+        <div class="tarjetaCaracteristica">
+          <h3 class="tituloCaracteristica">Transporte</h3>
+          <p class="descripcionCaracteristica">
+            6 líneas de subte, colectivos 24h y una ciclovía que va creciendo año a año.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="piePagina" id="piePagina">
+      <p class="textoPiePagina">Buenos Aires · Práctica 35</p>
+      <div class="puntosPaginacion" aria-hidden="true">
+        <span class="punto puntoActivo"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+      </div>
+    </footer>
+
+  </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
