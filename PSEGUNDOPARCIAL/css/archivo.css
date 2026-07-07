@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../img/fondo.png);
+    background-repeat: repeat;
+    background-size: auto;
+}
+.paginaGeneral {
+  background-image: url(../img/fondo.png);
+  background-repeat: repeat;
+  background-size: auto;
+  
+  display: flex;
+  justify-content: center;
+}
+#contenedorGeneral {
+  width: 90%;
+  max-width: 62.5rem; 
+  background-color: #fafafa;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#tituloPrincipal, .tituloPagina, .tituloDos, #cita, cite, strong, em, .enlaceNav {
+  font-family: 'Lato', sans-serif;
+}
+.listaNavegacion {
+  display: flex;
+  justify-content: space-around; 
+  list-style: none; 
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  background-color: #eeeeee; 
+}
+.enlaceNav {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  font-size: 1.2rem; 
+}
+.encabezadoPrincipal {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-bottom: 3rem; 
+  text-align: center;
+}
+#tituloPrincipal {
+  font-size: 3.5rem; 
+  margin-bottom: 1rem;
+}
+#cita {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+cite {
+  font-size: 1rem;
+  font-weight: bold;
+}
+/*layout columnas*/
+.contenedorColumnas {
+  display: flex;
+    gap: 2rem; 
+}
+
+.columnaContenido {
+      width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.columnaSinTitulo {
+    margin-top: 6rem; 
+}
+.tituloDos {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.parrafo {
+  font-size: 1.15rem;;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #e0f2f6; 
+  margin-top: 4rem; 
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.tituloPagina {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contenedorDosColumnas {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.columnaTexto {
+  width: 60%;
+}
+
+.columnaGaleria {
+  width: 40%;
+}
+
+#obras {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.unaObra {
+  background-color: #eaeaea;
+  padding: 1rem;
+  text-align: center;
+}
+
+.botonAccion {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
