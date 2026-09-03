@@ -1,0 +1,47 @@
+#contenedorGeneral {
+  width: 90%;
+  max-width: 62.5rem; 
+  background-color: #fafafa;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor-cuadrados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Estilo base para dar forma a los nodos */
+.cuadrado {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+/* Clases de color */
+.rojo {
+  background-color: red;
+}
+
+.negro {
+  background-color: black;
+}
+
+.verde {
+  background-color: greenyellow;
+}
+
+.azul {
+  background-color: blue;
+}
+
+#titulo {
+  font-size: 3.5rem; 
+  margin-bottom: 1rem;
+  background-color: lightpink;
+}
